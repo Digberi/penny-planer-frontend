@@ -27,6 +27,7 @@
     "react-cookie": "^7.0.2",
     "react-dom": "^18",
     "react-i18next": "^14.0.5",
+    "sonner": "^1.4.0",
     "tailwind-merge": "^2.2.1",
     "tailwindcss-animate": "^1.0.7"
   },

@@ -1,10 +1,10 @@
-import { useTranslation } from "@i18n";
+import { serverTranslation } from "@i18n";
 import { cn } from "@lib/utils";
 import Link from "next/link";
 import { ModeToggle } from "./mode-toggle";
 
 export async function Navbar({lng}: {lng: string}) {
-  const { t } = await useTranslation(lng, "common");
+  const { t } = await serverTranslation(lng, "common");
 
   return (
     <nav className={cn('flex justify-between m-8')}>

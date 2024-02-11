@@ -6,6 +6,7 @@ import { SandwichProvider } from "@components/providers/sandwich";
 import { Navbar } from "@components/navbar";
 import { languages } from "@i18n/settings";
 import { dir } from "i18next";
+import { WithLocaleParams } from "@types";
 
 export const fontSans = FontSans({
   subsets: ["latin"],
@@ -22,18 +23,13 @@ export async function generateStaticParams() {
   return languages.map((lng) => ({ lng }))
 }
 
-interface RootLayoutProps  {
-  params: {
-    lng: string;
-  }
-}
 
 export default function RootLayout({
   children,
   params: {
     lng
   }
-}: React.PropsWithChildren<RootLayoutProps>) {
+}: React.PropsWithChildren<WithLocaleParams>) {
   return (
     <html lang={lng} dir={dir(lng)}>
       <body className={cn(
